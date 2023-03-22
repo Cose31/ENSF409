@@ -1,43 +1,53 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class TaskTest {
+public class TaskTest 
+{
     Task task = new Task(1, "Task 1", 60, 120);
     @Test
-    public void testGetTaskID() {
-        assertEquals(1, task.getTaskID());
+    public void testGetTaskID() 
+    {
+        
+        assertEquals("Constructor or getter gave wrong TaskID", 1, task.getTaskID());
     }
     
     @Test
-    public void testGetDescription() {
-        assertEquals("Task 1", task.getDescription());
+    public void testGetDescription() 
+    {
+       
+        assertEquals("Constructor or getter gave wrong description", "Task 1", task.getDescription());
     }
     
     @Test
-    public void testSetDescription() {
+    public void testSetDescription() 
+    {
         task.setDescription("Updated task description");
-        assertEquals("Updated task description", task.getDescription());
+        assertEquals("Setter did not update description, or getter for description is not working properly with update", "Updated task description", task.getDescription());
     }
     
     @Test
-    public void testGetDuration() {
-        assertEquals(60, task.getDuration());
+    public void testGetDuration() 
+    {
+        assertEquals("Constructor or getter gave wrong duration", 60, task.getDuration());
     }
     
     @Test
-    public void testSetDuration() {
+    public void testSetDuration() 
+    {
         task.setDuration(90);
-        assertEquals(90, task.getDuration());
+        assertEquals("Setter did not update duration properly, or getter for duration is not working properly with update", 90, task.getDuration());
     }
     
     @Test
-    public void testGetTimeWindow() {
-        assertEquals(120, task.getTimeWindow());
+    public void testGetTimeWindow() 
+    {
+        assertEquals("Constructor or getter gave wrong TimeWindow", 120, task.getTimeWindow());
     }
     
     @Test
-    public void testSetTimeWindow() {
+    public void testSetTimeWindow() 
+    {
         task.setTimeWindow(180);
-        assertEquals(180, task.getTimeWindow());
+        assertEquals("Setter did not update TimeWindow correctly, or getter for timewindow is not working properly with update", 180, task.getTimeWindow());
     }
 }
