@@ -14,7 +14,6 @@ public class TaskTest
     @Test
     public void testGetDescription() 
     {
-       
         assertEquals("Constructor or getter gave wrong description", "Task 1", task.getDescription());
     }
     
